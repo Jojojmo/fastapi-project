@@ -42,9 +42,61 @@ A rota `/auth` é essencial para a segurança da aplicação, gerenciando a aute
 
 ## Configuração (Set Up)
 
-1. Instale as bibliotecas usando o Poetry ou crie um ambiente virtual.
-2. Crie um arquivo `.env` (os nomes das variáveis de ambiente podem ser encontrados no arquivo `.envexample`).
-3. Certifique-se de ter uma versão atualizada do LLama, que pode ser baixada [aqui](https://ollama.com/).
+1. **Criar um Ambiente Virtual**:
+   Abra o terminal e navegue até o diretório do seu projeto. Em seguida, execute:
+   ```bash
+   python -m venv venv
+   ```
+   Isso criará uma nova pasta chamada `venv` que contém o ambiente virtual.
+
+2. **Ativar o Ambiente Virtual**:
+   - No Windows:
+     ```bash
+     venv\Scripts\activate
+     ```
+   - No macOS e Linux:
+     ```bash
+     source venv/bin/activate
+     ```
+
+3. **Instalar Dependências**:
+   Instale as bibliotecas necessárias, normalmente listadas em um arquivo `requirements.txt` (se houver):
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+### Usando Poetry
+
+1. **Instalar o Poetry**:
+   Se você ainda não tem o Poetry instalado, você pode instalar usando o seguinte comando:
+   ```bash
+   curl -sSL https://install.python-poetry.org | python3 -
+   ```
+   Ou, se estiver no Windows, você pode seguir as instruções no [site oficial do Poetry](https://python-poetry.org/docs/#installation).
+
+2. **Criar um Novo Projeto (se necessário)**:
+   Se você está criando um novo projeto, inicie um novo repositório com:
+   ```bash
+   poetry new fastapi_project
+   ```
+
+3. **Adicionar Dependências**:
+   Navegue até o diretório do seu projeto e adicione as dependências necessárias. Caso tenha um `pyproject.toml`, você pode adicionar as dependências com:
+   ```bash
+   poetry install
+   ```
+
+4. **Ativar o Ambiente Poetry**:
+   Para ativar o ambiente virtual criado pelo Poetry, use:
+   ```bash
+   poetry shell
+   ```
+
+### **Criar o Arquivo `.env`**:
+   Semelhante ao método anterior, crie um arquivo `.env` na raiz do seu projeto e configure as variáveis de ambiente conforme indicado no arquivo `.envexample`.
+
+### **Certifique-se da Versão Atualizada do LLama**:
+   Por fim, garanta que você tenha uma versão atualizada do LLama. Você pode baixá-lo através do link fornecido: [aqui](https://ollama.com/).
 
 ## Como Rodar a API
 
